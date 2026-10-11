@@ -51,7 +51,24 @@ label{display:block;font-size:13px;color:var(--mute);margin:10px 0 4px}input[typ
 .ext{font:600 12px var(--m);height:44px;border-radius:8px;display:grid;place-items:center;color:#fff;background:#6b7a96}.PDF{background:#c0392b}.PPTX{background:#c9581b}.DOCX{background:#2a62b8}
 .doc b{display:block;line-height:1.35}.doc small{color:var(--mute);font-size:13px}@media(max-width:600px){.doc{grid-template-columns:44px 1fr}.doc .btn{grid-column:1/-1;justify-content:center}}
 .tm img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;margin-bottom:12px}.tm .id{font:400 12.5px var(--m);color:var(--mute)}.tm a{font-size:13px;word-break:break-all}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-size:14px}
+footer{border-top:1px solid var(--line);padding:24px 0 20px;color:var(--mute);font-size:13px;background:var(--bg)}
+.ft-wrap{display:grid;grid-template-columns:1.35fr 1fr 1.25fr;gap:24px 32px;align-items:start}
+.ft-brand .ft-title{font-family:var(--d);font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.35;margin:0 0 6px}
+.ft-brand .ft-meta{font:500 11.5px var(--m);color:var(--am);display:flex;flex-wrap:wrap;align-items:center;gap:6px;line-height:1.4}
+.ft-brand .ft-meta b{font-weight:600;letter-spacing:.02em}
+.ft-brand .ft-meta .sep{color:var(--line);font-family:var(--s)}
+.ft-brand .ft-meta span{color:var(--mute);font-family:var(--s);font-weight:400}
+.ft-lbl{font:700 11px var(--m);text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin:0 0 8px}
+.ft-nav{display:grid;grid-template-columns:1fr 1fr;gap:3px 12px}
+.ft-nav a{color:var(--mute);text-decoration:none;font-size:12.5px;line-height:1.45;transition:color .15s}
+.ft-nav a:hover{color:var(--cy)}
+.ft-team{display:flex;flex-direction:column;gap:3px}
+.ft-member{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;color:inherit;font-size:12.5px;padding:2px 6px;margin:0 -6px;border-radius:6px;transition:background .15s}
+.ft-member:hover{background:var(--bg2)}
+.ft-member .ft-name{color:var(--ink);font-weight:500;font-size:12px;white-space:nowrap}
+.ft-member .ft-id{font-family:var(--m);font-size:11.5px;color:var(--mute);letter-spacing:.02em;white-space:nowrap}
+@media(max-width:860px){.ft-wrap{grid-template-columns:1fr 1fr;gap:20px}.ft-brand{grid-column:1/-1}}
+@media(max-width:520px){.ft-wrap{grid-template-columns:1fr;gap:16px}.ft-member .ft-name{font-size:12.5px}}
 :focus-visible{outline:2px solid var(--am);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){.pg{animation:none}.tile{transition:none}}
 .sn{min-height:78vh;display:flex;align-items:center}.sn .card{max-width:540px;padding:26px}.sn:nth-of-type(even) .card{margin-left:auto}.sn h2{margin:8px 0 12px}
@@ -151,7 +168,55 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <main id="app"></main>
 <div class="mdl" id="mdl" hidden><div class="mbox" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="mh"><div><b id="mt"></b><small id="ms"></small></div><div class="ma"><button id="mp" aria-label="Previous document">←</button><button id="mn" aria-label="Next document">→</button><a class="btn" id="mo" target="_blank" rel="noopener">Open ↗</a><a class="btn p" id="md" download>⬇ Download</a><button id="mx" aria-label="Close preview">✕</button></div></div><iframe id="mf" title="Document preview"></iframe></div></div>
 <div class="tray" id="tray"><b id="tn">0 selected</b><button class="btn p" id="tdl">⬇ Download selected</button><button id="tcl">Clear</button></div>
-<footer><div class="w">SLIIT Faculty of Computing · BSc (Hons) Information Technology · Research project R26-IT-132 · 2026. A research prototype and decision-support concept, not a replacement for official aviation meteorological services. Contact: <a href="mailto:shashika.l@sliit.lk">shashika.l@sliit.lk</a></div></footer>
+<footer>
+  <div class="w">
+    <div class="ft-wrap">
+      <div class="ft-brand">
+        <div class="ft-title">AI-Based Hyper-Local Aviation Weather Forecast Verification System for Sri Lankan Monsoon Patterns</div>
+        <div class="ft-meta">
+          <b>R26-IT-132</b>
+          <span class="sep">·</span>
+          <span>Centre of Excellence for AI (CoEAI)</span>
+          <span class="sep">·</span>
+          <span>SLIIT</span>
+        </div>
+      </div>
+      <div class="ft-col">
+        <div class="ft-lbl">Pages</div>
+        <nav class="ft-nav" aria-label="Footer Navigation">
+          <a href="#/">Home</a>
+          <a href="#/project">Methodology</a>
+          <a href="#/project">Architecture</a>
+          <a href="#/c/temp">Results</a>
+          <a href="#/team">Team</a>
+          <a href="#/docs">Documents</a>
+          <a href="#/panel">Panel Comments</a>
+        </nav>
+      </div>
+      <div class="ft-col">
+        <div class="ft-lbl">Research team</div>
+        <div class="ft-team">
+          <a class="ft-member" href="#/c/temp" title="Sankadeepa W.D.I. · Temperature & pressure">
+            <span class="ft-name">Sankadeepa W.D.I.</span>
+            <span class="ft-id">IT22113986</span>
+          </a>
+          <a class="ft-member" href="#/c/wind" title="Ranasingha R.A.A.D. · Wind patterns & pilot portal">
+            <span class="ft-name">Ranasingha R.A.A.D.</span>
+            <span class="ft-id">IT22269720</span>
+          </a>
+          <a class="ft-member" href="#/c/cloud" title="Jayawardhana H.M.S.I. · Cloud & visibility">
+            <span class="ft-name">Jayawardhana H.M.S.I.</span>
+            <span class="ft-id">IT22619976</span>
+          </a>
+          <a class="ft-member" href="#/c/qnh" title="Jayathilaka P.K.V.K. · QNH, dew point & RH">
+            <span class="ft-name">Jayathilaka P.K.V.K.</span>
+            <span class="ft-id">IT22069504</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 <script>
 const C={
 temp:{n:"Temperature & pressure",s:"Northeast Monsoon",who:"Sankadeepa W.D.I",id:"IT22113986",img:"sankadeepa",model:"Hybrid Random Forest + LSTM",
@@ -327,8 +392,9 @@ app.innerHTML=`<div class="w pg"><div class="k rv">Our team</div><h1 class="rv" 
 const dr=()=>{$('#ac').innerHTML=P6.map((p,i)=>`<div class="ap ${i===on?'on':''}" data-i="${i}" tabindex="0" role="button" aria-label="${p[1]}"><img src="img/${p[0]}.jpg" alt="${p[1]}" loading="lazy"><div class="cap"><div class="nm">${p[1]}</div><div class="ro">${p[2]}</div><div class="dt">${p[3]}<br>${p[5]?`<a class="btn p" href="#/c/${p[5]}">Full contribution →</a>`:''}<a class="btn" href="mailto:${p[4]}">${p[4]}</a></div></div></div>`).join('')};
 dr();const pick=e=>{const a=e.target.closest('.ap');if(!a||e.target.closest('a'))return;const i=+a.dataset.i;if(i!==on){on=i;document.querySelectorAll('.ap').forEach(x=>x.classList.toggle('on',+x.dataset.i===i))}};
 $('#ac').onclick=pick;$('#ac').onmouseover=e=>{if(matchMedia('(hover:hover)').matches)pick(e)};$('#ac').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(e)}}}
-function route(){const h=location.hash.replace('#/','').split('/');cancelAnimationFrame(raf);if(io)io.disconnect();const [a,b]=h;const hm=!a;closeM();removeEventListener('scroll',onScroll);if(a!=='docs')$('#tray').classList.remove('on');
-({'':home,project,c:()=>comp(C[b]?b:'temp'),panel,docs,team}[a]||home)();scrollTo(0,0);if(a)flow(a==='c'?({temp:'ne',wind:'sw',cloud:'i1',qnh:'i2'}[b]||'ne'):'hero');
+function route(){const h=location.hash.replace('#/','').split('/');cancelAnimationFrame(raf);if(io)io.disconnect();const [a,b]=h;const hm=!a;closeM();removeEventListener('scroll',onScroll);if(a!=='docs'&&a!=='documents')$('#tray').classList.remove('on');
+const routes={'':home,project,methodology:project,architecture:project,results:()=>comp('temp'),c:()=>comp(C[b]?b:'temp'),panel,comments:panel,docs,documents:docs,team};
+(routes[a]||home)();scrollTo(0,0);if(a)flow(a==='c'?({temp:'ne',wind:'sw',cloud:'i1',qnh:'i2'}[b]||'ne'):'hero');
 document.querySelectorAll('#nav a').forEach(x=>x.classList.toggle('on',x.getAttribute('href')==='#/'+(a==='c'?'c/temp':a||'')))}
 addEventListener('hashchange',route);route();
 let s=null;try{s=localStorage.getItem('th')}catch(e){}if(s)document.documentElement.dataset.theme=s;
