@@ -13,7 +13,10 @@
 a{color:var(--cy)}img{max-width:100%;display:block}.w{max-width:1120px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header .w{display:flex;align-items:center;gap:6px;height:58px}
-.logo{font:800 18px var(--d);color:var(--ink);text-decoration:none;margin-right:auto;white-space:nowrap}.logo span{color:var(--am)}
+.logo{display:inline-flex;flex-direction:column;justify-content:center;text-decoration:none;margin-right:auto}
+.logo-sub{font:700 9.5px var(--m);letter-spacing:.2em;color:var(--am);text-transform:uppercase;line-height:1;margin-bottom:2px}
+.logo-txt{font:800 17px/1.1 var(--d);color:var(--ink);white-space:nowrap}
+.logo-txt span{color:var(--cy)}
 nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}nav a{color:var(--mute);text-decoration:none;font-size:14px;font-weight:500;padding:8px 11px;border-radius:8px;white-space:nowrap}
 nav a:hover{color:var(--ink)}nav a.on{color:var(--bg);background:var(--cy)}
 button,.btn{font:500 14px var(--s);cursor:pointer;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
@@ -157,7 +160,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 20px;color:var(--mute);fo
 </style>
 </head>
 <body>
-<header><div class="w"><a class="logo" href="#/">Srilanka MET <span>AVIATION</span></a>
+<header><div class="w"><a class="logo" href="#/"><span class="logo-sub">SRI LANKA</span><span class="logo-txt">MET <span>AVIATION</span></span></a>
 <nav id="nav"><a href="#/">Home</a><a href="#/project">Project</a><a href="#/c/temp">Components</a><a href="#/panel">Panel feedback</a><a href="#/docs">Downloads</a><a href="#/team">Team</a></nav>
 <button id="th" aria-label="Toggle theme">◐</button></div></header>
 <canvas id="cv" aria-hidden="true"></canvas>
