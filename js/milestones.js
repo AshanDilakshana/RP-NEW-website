@@ -18,14 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  // Accordion Toggle for Milestone Cards
-  document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const card = header.closest('.accordion-card');
-      if (card) {
-        card.classList.toggle('open');
-      }
-    });
-  });
 });

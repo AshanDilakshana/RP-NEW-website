@@ -668,8 +668,14 @@ table.academic-table td strong { color: var(--text); }
 .doc-meta { font-size: .8rem; font-weight: 700; color: var(--accent-strong); margin-top: 8px; display: flex; gap: 14px; flex-wrap: wrap; }
 .doc-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 
-/* Category Block Dividers */
-.doc-category-block { margin-bottom: 36px; }
+/* Category Block Dividers & Accordions */
+.doc-category-block { margin-bottom: 24px; }
+.doc-category-block.accordion-card {
+  margin-bottom: 24px;
+}
+.doc-category-block.accordion-card .accordion-body {
+  padding: 20px 24px 24px;
+}
 .doc-category-header {
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
   padding: 12px 16px; background: var(--surface-2); border-left: 4px solid var(--primary);

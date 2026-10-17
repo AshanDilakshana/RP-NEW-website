@@ -26,11 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Toggle category block wrappers
+    // Toggle category block wrappers & accordions
     document.querySelectorAll('.doc-category-block').forEach(block => {
       const visibleChildren = block.querySelectorAll('.doc-item:not([style*="display: none"])');
+      const badgeCount = block.querySelector('.category-count');
+      if (badgeCount) {
+        badgeCount.textContent = visibleChildren.length;
+      }
       if (visibleChildren.length > 0) {
         block.style.display = '';
+        if (searchQuery || activeCategory !== 'all') {
+          block.classList.add('open');
+          var hdr = block.querySelector('.accordion-header');
+          if (hdr) hdr.setAttribute('aria-expanded', 'true');
+        }
       } else {
         block.style.display = 'none';
       }
