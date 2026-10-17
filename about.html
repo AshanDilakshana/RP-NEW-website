@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Hyper-Local Aviation Weather Forecast Verification System</title>
+  <meta name="description"
+    content="Research group members, academic supervisors, roles, individual contributions, and affiliations for SLIIT project R26-IT-132.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="R26-IT-132 home">
+        <img src="img/logo.png" alt="Sri Lanka Met Aviation Logo" class="brand-logo-img">
+        <span class="brand-text"><span>Sri Lanka Met Aviation</span><small>R26-IT-132 · Aviation Weather Intelligence</small></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">&#9790;</button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / About Us</div>
+      <span class="section-tag">Faculty &amp; Student Research Team</span>
+      <h1>About the Research Group</h1>
+      <p class="lead">
+        Conducted under the Centre of Excellence for AI (CoEAI), Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT), in consultation with the Department of Meteorology, Sri Lanka.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <div class="container">
+
+      <!-- Academic Supervision Section -->
+      <section style="margin-bottom: 56px;">
+        <span class="section-tag">Academic Leadership</span>
+        <h2>Research Supervision</h2>
+        <p class="lead">Guiding the scientific methodology, empirical evaluation, and academic rigor throughout the project:</p>
+
+        <div class="grid grid-2">
+          <!-- Supervisor -->
+          <div class="team-card">
+            <div style="display:grid; grid-template-columns: 140px 1fr; gap:20px; align-items:center; padding:20px;">
+              <div class="team-img-wrap" style="border-radius:10px; aspect-ratio:1;">
+                <img src="img/lokuliyana.jpg" alt="Shashika Lokuliyana">
+              </div>
+              <div>
+                <div class="team-role">Principal Supervisor</div>
+                <h3 class="team-name" style="margin-bottom:4px;">Shashika Lokuliyana</h3>
+                <div class="team-id">Faculty of Computing · SLIIT</div>
+                <p class="team-contrib" style="margin-bottom:12px;">
+                  Provided comprehensive guidance on research problem formulation, machine learning architectures, statistical forecast verification, and academic documentation.
+                </p>
+                <a href="mailto:shashika.l@sliit.lk" class="btn btn-sm">shashika.l@sliit.lk</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Co-Supervisor -->
+          <div class="team-card">
+            <div style="display:grid; grid-template-columns: 140px 1fr; gap:20px; align-items:center; padding:20px;">
+              <div class="team-img-wrap" style="border-radius:10px; aspect-ratio:1;">
+                <img src="img/mahaadikara.jpg" alt="Hansika Mahaadikara">
+              </div>
+              <div>
+                <div class="team-role">Co-Supervisor</div>
+                <h3 class="team-name" style="margin-bottom:4px;">Hansika Mahaadikara</h3>
+                <div class="team-id">Faculty of Computing · SLIIT</div>
+                <p class="team-contrib" style="margin-bottom:12px;">
+                  Supported the technical verification, experimental evaluation standards, research milestone reviews, and conference paper preparation.
+                </p>
+                <a href="mailto:hansika.m@sliit.lk" class="btn btn-sm">hansika.m@sliit.lk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Student Researchers Section -->
+      <section style="margin-bottom: 56px;">
+        <span class="section-tag">Student Researchers · Group R26-IT-132</span>
+        <h2>Individual Research Contributors</h2>
+        <p class="lead">Four final-year undergraduate researchers, each responsible for an independent meteorological parameter and seasonal subsystem:</p>
+
+        <div class="grid grid-2">
+
+          <!-- Member 1: Sankadeepa W.D.I. -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="img/sankadeepa.jpg" alt="Sankadeepa W.D.I.">
+            </div>
+            <div class="team-info">
+              <div class="team-role">Subsystem: Temperature &amp; Pressure (Northeast Monsoon)</div>
+              <h3 class="team-name">Sankadeepa W.D.I.</h3>
+              <div class="team-id">Registration No: <strong>IT22113986</strong></div>
+              <p class="team-contrib">
+                <strong>Research Contribution:</strong> Designed and implemented the Hybrid Random Forest + LSTM architecture for short-term (T+3h) surface temperature and barometric pressure forecasting (Hybrid R² = 0.84, MAE ≈ 0.86). Developed the aeronautical translation layer computing Pressure Altitude and Density Altitude categories (Normal, Elevated, Critical) for runway takeoff weight and climb rate planning.
+              </p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <a href="mailto:it22113986@my.sliit.lk" class="btn btn-sm">it22113986@my.sliit.lk</a>
+                <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Individual Thesis (Drive) ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2: Ranasinghe R.A.A.D. -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="img/ranasinghe.jpg" alt="Ranasinghe R.A.A.D.">
+            </div>
+            <div class="team-info">
+              <div class="team-role">Subsystem: Wind Patterns &amp; Pilot Portal (Southwest Monsoon)</div>
+              <h3 class="team-name">Ranasinghe R.A.A.D.</h3>
+              <div class="team-id">Registration No: <strong>IT22269720</strong> · Ashan Dilakshana</div>
+              <p class="team-contrib">
+                <strong>Research Contribution:</strong> Developed the wind prediction engine utilizing cyclic sine/cosine trigonometry transformations, XGBoost (1-hour nowcast), and Temporal Fusion Transformer (TFT 3-hour forecast), achieving wind speed MAE &lt; 1.00 knot (well within ICAO tolerance). Implemented Runway 04 vector resolution for headwind/crosswind calculation, crosswind alert logic, and the pilot decision-support portal.
+              </p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <a href="mailto:it22269720@my.sliit.lk" class="btn btn-sm">it22269720@my.sliit.lk</a>
+                <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Individual Thesis (Drive) ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3: Jayawardhana H.M.S.I. -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="img/jayawardhana.jpg" alt="Jayawardhana H.M.S.I.">
+            </div>
+            <div class="team-info">
+              <div class="team-role">Subsystem: Cloud &amp; Visibility (First Inter-Monsoon)</div>
+              <h3 class="team-name">Jayawardhana H.M.S.I.</h3>
+              <div class="team-id">Registration No: <strong>IT22619976</strong></div>
+              <p class="team-contrib">
+                <strong>Research Contribution:</strong> Engineered the cloud coverage classification and runway horizontal visibility estimation models using Gradient Boosted Trees (XGBoost), achieving 78.15% cloud accuracy and reducing visibility MAE by 28.3% compared to baseline Decision Trees. Built feature pipelines incorporating dew-point depression and wind-pressure interactions, serving predictions via a lightweight API.
+              </p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <a href="mailto:it22619976@my.sliit.lk" class="btn btn-sm">it22619976@my.sliit.lk</a>
+                <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Individual Thesis (Drive) ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 4: Jayathilaka P.K.V.K. -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="img/jayathilaka.jpg" alt="Jayathilaka P.K.V.K.">
+            </div>
+            <div class="team-info">
+              <div class="team-role">Subsystem: QNH, Dew Point &amp; RH (Second Inter-Monsoon)</div>
+              <h3 class="team-name">Jayathilaka P.K.V.K.</h3>
+              <div class="team-id">Registration No: <strong>IT22069504</strong></div>
+              <p class="team-contrib">
+                <strong>Research Contribution:</strong> Designed and deployed the barometric pressure (QNH) and dew point forecasting pipeline using LightGBM, coupled with the August-Roche-Magnus thermodynamic formula to derive Relative Humidity while preserving thermodynamic equilibrium (Dew point MAE: 0.58 °C, QNH MAE: 1.8 hPa). Implemented a localized radiation fog early-warning rule.
+              </p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <a href="mailto:it22069504@my.sliit.lk" class="btn btn-sm">it22069504@my.sliit.lk</a>
+                <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Individual Thesis (Drive) ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Institutional Acknowledgements Section -->
+      <section>
+        <div class="card" style="padding: 28px; background: color-mix(in srgb, var(--card) 90%, transparent);">
+          <span class="section-tag">External Domain Collaboration</span>
+          <h3>Institutional Acknowledgements</h3>
+          <p>
+            The research group gratefully acknowledges the invaluable support and operational guidance provided by the <strong>Department of Meteorology, Sri Lanka</strong>:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14.5px; line-height: 1.8; color: var(--mute);">
+            <li><strong>Mr. Ajith Wijemmanne</strong> — Director of Meteorology, for facilitating access to official historical aerodrome meteorological observations from Katunayake (VCBI) covering 2019–2026.</li>
+            <li><strong>Mr. Jeewan</strong> — Deputy Director of Forecasting, for domain insights on Sri Lankan tropical monsoon dynamics, aerodrome meteorological hazard thresholds, and operational forecasting challenges.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Hyper-Local Aviation Weather Forecast Verification System for Sri Lankan Monsoon Patterns</h4>
+          <p>
+            An academic research project undertaken at the Centre of Excellence for AI (CoEAI), Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT).
+          </p>
+          <div class="footer-meta">
+            Project Code: <strong>R26-IT-132</strong> · Target Aerodrome: <strong>VCBI (Katunayake)</strong>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Website Sections</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain Review</a></li>
+            <li><a href="milestones.html">Milestones Timeline</a></li>
+            <li><a href="documents.html">Documents Repository</a></li>
+            <li><a href="presentations.html">Past Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Research Group R26-IT-132 · SLIIT Faculty of Computing</div>
+        <div>Academic Research Project Information Website</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Hyper-Local Aviation Weather Forecast Verification System</title>
+  <meta name="description"
+    content="Academic contact details, institutional affiliations, researcher emails, and academic inquiry form for SLIIT research project R26-IT-132.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="R26-IT-132 home">
+        <img src="img/logo.png" alt="Sri Lanka Met Aviation Logo" class="brand-logo-img">
+        <span class="brand-text"><span>Sri Lanka Met Aviation</span><small>R26-IT-132 · Aviation Weather Intelligence</small></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">&#9790;</button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+      <span class="section-tag">Academic Inquiries &amp; Institutional Correspondence</span>
+      <h1>Contact the Research Group</h1>
+      <p class="lead">
+        For academic inquiries, dataset verification, or technical discussions regarding Research Project R26-IT-132, please contact the student researchers or project supervisors.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <div class="container">
+
+      <div class="grid grid-2" style="gap: 36px; align-items: flex-start;">
+
+        <!-- Left Column: Academic Contact Details -->
+        <div>
+          <div class="card" style="margin-bottom: 24px;">
+            <span class="section-tag">Institutional Department</span>
+            <h3 style="margin-bottom: 12px;">Faculty of Computing, SLIIT</h3>
+            <p>
+              <strong>Centre of Excellence for AI (CoEAI)</strong><br>
+              Sri Lanka Institute of Information Technology (SLIIT)<br>
+              New Kandy Road, Malabe, Sri Lanka.
+            </p>
+            <p style="margin-top: 12px;">
+              <strong>Web:</strong> <a href="https://www.sliit.lk" target="_blank" rel="noopener">www.sliit.lk</a><br>
+              <strong>Project Group ID:</strong> R26-IT-132
+            </p>
+          </div>
+
+          <div class="card" style="margin-bottom: 24px;">
+            <span class="section-tag">Supervisors</span>
+            <h3 style="margin-bottom: 12px;">Academic Supervisors</h3>
+            <p style="margin-bottom: 8px;">
+              <strong>Shashika Lokuliyana (Supervisor)</strong><br>
+              Email: <a href="mailto:shashika.l@sliit.lk">shashika.l@sliit.lk</a>
+            </p>
+            <p>
+              <strong>Hansika Mahaadikara (Co-Supervisor)</strong><br>
+              Email: <a href="mailto:hansika.m@sliit.lk">hansika.m@sliit.lk</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="section-tag">Researchers</span>
+            <h3 style="margin-bottom: 12px;">Student Researcher Emails</h3>
+            <ul style="list-style: none; display:flex; flex-direction:column; gap:8px; font-size:14px;">
+              <li><strong>Sankadeepa W.D.I. (IT22113986):</strong> <a href="mailto:it22113986@my.sliit.lk">it22113986@my.sliit.lk</a></li>
+              <li><strong>Ranasinghe R.A.A.D. (IT22269720):</strong> <a href="mailto:it22269720@my.sliit.lk">it22269720@my.sliit.lk</a></li>
+              <li><strong>Jayawardhana H.M.S.I. (IT22619976):</strong> <a href="mailto:it22619976@my.sliit.lk">it22619976@my.sliit.lk</a></li>
+              <li><strong>Jayathilaka P.K.V.K. (IT22069504):</strong> <a href="mailto:it22069504@my.sliit.lk">it22069504@my.sliit.lk</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column: Validated Contact Form -->
+        <div>
+          <div class="card" style="padding: 32px;">
+            <span class="section-tag">Direct Inquiry Form</span>
+            <h3 style="margin-bottom: 8px;">Send an Academic Message</h3>
+            <p style="font-size: 14.5px; margin-bottom: 20px;">
+              Please complete all required fields below. The form includes client-side JavaScript input validation.
+            </p>
+
+            <div id="contact-alert" style="display: none; margin-bottom: 20px;"></div>
+
+            <form id="academic-contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Dr. John Doe" required>
+                <div class="form-error" id="name-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="name@institution.org" required>
+                <div class="form-error" id="email-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject *</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Research Inquiry regarding Wind Model evaluation" required>
+                <div class="form-error" id="subject-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" rows="5" class="form-control" placeholder="Please type your academic inquiry or feedback here..." required></textarea>
+                <div class="form-error" id="message-error"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry →</button>
+            </form>
+
+            <div class="callout" style="margin-top: 24px; font-size: 13px;">
+              <h4>Demonstration Mode Transparency</h4>
+              <p>
+                As required by university web development evaluation guidelines, this static academic site runs without a live backend email server. Submitting the form validates inputs locally and prompts direct email client dispatch to the researcher group.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Hyper-Local Aviation Weather Forecast Verification System for Sri Lankan Monsoon Patterns</h4>
+          <p>
+            An academic research project undertaken at the Centre of Excellence for AI (CoEAI), Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT).
+          </p>
+          <div class="footer-meta">
+            Project Code: <strong>R26-IT-132</strong> · Target Aerodrome: <strong>VCBI (Katunayake)</strong>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Website Sections</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain Review</a></li>
+            <li><a href="milestones.html">Milestones Timeline</a></li>
+            <li><a href="documents.html">Documents Repository</a></li>
+            <li><a href="presentations.html">Past Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Research Group R26-IT-132 · SLIIT Faculty of Computing</div>
+        <div>Academic Research Project Information Website</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>

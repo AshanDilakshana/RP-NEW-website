@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domain | Hyper-Local Aviation Weather Forecast Verification System</title>
+  <meta name="description"
+    content="Comprehensive domain review, literature survey, research gap, methodology, and technical architecture for SLIIT research project R26-IT-132.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="R26-IT-132 home">
+        <img src="img/logo.png" alt="Sri Lanka Met Aviation Logo" class="brand-logo-img">
+        <span class="brand-text"><span>Sri Lanka Met Aviation</span><small>R26-IT-132 · Aviation Weather Intelligence</small></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">&#9790;</button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> / Domain</div>
+      <span class="section-tag">Research &amp; Technical Documentation</span>
+      <h1>Research Domain &amp; Technical Background</h1>
+      <p class="lead">
+        A comprehensive academic survey covering theoretical foundations, literature review, identified research gaps, and the multi-stage machine learning methodology implemented for VCBI.
+      </p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <a href="#sub-6" class="btn btn-sm">Jump to Literature Review</a>
+        <a href="#sub-8" class="btn btn-sm">Research Gap</a>
+        <a href="#sub-14" class="btn btn-sm">System Architecture</a>
+        <a href="#sub-17" class="btn btn-sm">Model Development</a>
+        <a href="#sub-18" class="btn btn-sm">Evaluation &amp; Results</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <div class="container">
+      <div class="domain-layout">
+        <aside class="subnav" aria-label="On this page"><p class="subnav-title">On this page</p><ul>
+          <li><a href="#sub-1">01 &middot; Introduction</a></li>
+          <li><a href="#sub-2">02 &middot; Aviation Meteorology</a></li>
+          <li><a href="#sub-3">03 &middot; Aviation Forecasting</a></li>
+          <li><a href="#sub-4">04 &middot; Forecast Verification</a></li>
+          <li><a href="#sub-5">05 &middot; Sri Lankan Monsoons</a></li>
+          <li><a href="#sub-6">06 &middot; Literature Review</a></li>
+          <li><a href="#sub-7">07 &middot; Existing Approaches</a></li>
+          <li><a href="#sub-8">08 &middot; Research Gap</a></li>
+          <li><a href="#sub-9">09 &middot; Research Problem</a></li>
+          <li><a href="#sub-10">10 &middot; Research Aim</a></li>
+          <li><a href="#sub-11">11 &middot; Objectives</a></li>
+          <li><a href="#sub-12">12 &middot; Research Questions</a></li>
+          <li><a href="#sub-13">13 &middot; Methodology</a></li>
+          <li><a href="#sub-14">14 &middot; System Architecture</a></li>
+          <li><a href="#sub-15">15 &middot; Data Collection</a></li>
+          <li><a href="#sub-16">16 &middot; Preprocessing &amp; Features</a></li>
+          <li><a href="#sub-17">17 &middot; Model Development</a></li>
+          <li><a href="#sub-18">18 &middot; Model Evaluation</a></li>
+          <li><a href="#sub-19">19 &middot; Technologies Used</a></li>
+          <li><a href="#sub-20">20 &middot; Contributions</a></li>
+          </ul></aside>
+        <div>
+
+      <!-- Subtopic 1 -->
+      <article class="domain-subtopic" id="sub-1">
+        <h3><span class="subtopic-num">01</span> Introduction to the Research Domain</h3>
+        <p>
+          Aviation meteorology is a specialized discipline dedicated to measuring, observing, and predicting atmospheric phenomena that directly impact the safety, efficiency, and economics of civil and military air operations. Unlike broad public synoptic forecasts that cover hundreds of square kilometers over multiple days, aerodrome meteorological services require hyper-local (microscale to mesoscale) precision over short temporal horizons (0 to 3 hours).
+        </p>
+        <p>
+          This research lies at the intersection of <strong>Atmospheric Physics</strong>, <strong>Aeronautical Operations</strong>, and <strong>Applied Machine Learning</strong>. It investigates how data-driven AI models can ingest airport-level observations, learn complex non-linear meteorological interactions, output verified short-term forecasts, and directly translate them into operational safety indicators for pilots, air traffic controllers (ATC), and dispatchers.
+        </p>
+      </article>
+
+      <!-- Subtopic 2 -->
+      <article class="domain-subtopic" id="sub-2">
+        <h3><span class="subtopic-num">02</span> Background of Aviation Meteorology</h3>
+        <p>
+          Aircraft flight dynamics and airport ground operations are governed by physical characteristics of the surrounding atmosphere. Key aerodrome parameters include:
+        </p>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li><strong>Barometric Pressure (QNH):</strong> The altimeter sub-scale setting that causes the altimeter to read aerodrome elevation when on the ground. Pressure drops reduce air density and alter aircraft performance.</li>
+          <li><strong>Surface Wind Speed and Direction:</strong> Determines runway selection, maximum permissible takeoff and landing crosswind components, and windshear risk.</li>
+          <li><strong>Air Temperature &amp; Dew Point:</strong> Determines air density, engine thrust output, takeoff roll distance, and the saturation point at which fog or low stratus clouds form.</li>
+          <li><strong>Horizontal Visibility &amp; Cloud Ceiling:</strong> Dictates whether aircraft operate under Visual Flight Rules (VFR) or Instrument Flight Rules (IFR), determining aerodrome landing minimums.</li>
+        </ul>
+      </article>
+
+      <!-- Subtopic 3 -->
+      <article class="domain-subtopic" id="sub-3">
+        <h3><span class="subtopic-num">03</span> Aviation Weather Forecasting</h3>
+        <p>
+          In international civil aviation, standardized weather dissemination is governed by the International Civil Aviation Organization (ICAO Annex 3) and the World Meteorological Organization (WMO):
+        </p>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li><strong>METAR (Meteorological Aerodrome Report):</strong> Routine hourly or half-hourly observation describing present ground-level weather at the airport.</li>
+          <li><strong>TAF (Terminal Aerodrome Forecast):</strong> Human-forecaster-generated aerodrome forecast issued typically every 6 hours for a 24- to 30-hour validity window.</li>
+        </ul>
+        <p>
+          While TAFs provide structured broad guidance, operational crews frequently face sudden meso-beta scale convective events, gust fronts, and rapid visibility deterioration within the immediate 1 to 3 hours between TAF issuances. This critical window represents the focus of <em>nowcasting</em> and short-term hyper-local forecasting.
+        </p>
+      </article>
+
+      <!-- Subtopic 4 -->
+      <article class="domain-subtopic" id="sub-4">
+        <h3><span class="subtopic-num">04</span> Weather Forecast Verification</h3>
+        <p>
+          A forecast without systematic verification provides unknown reliability. In aviation, forecast verification is the process of matching past predictive outputs with the actual observations that materialized at the targeted valid time.
+        </p>
+        <p>
+          Verification establishes quantitative credibility through statistical evaluation metrics:
+        </p>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li><strong>Mean Absolute Error (MAE):</strong> Measures the average magnitude of absolute forecast errors, expressing precision in original units (e.g., knots, °C, hPa).</li>
+          <li><strong>Root Mean Square Error (RMSE):</strong> Penalizes large individual outlier errors heavily, essential for detecting dangerous unexpected weather extremes.</li>
+          <li><strong>Coefficient of Determination (R²):</strong> Measures the proportion of variance in the observed weather variable explained by the machine learning model.</li>
+        </ul>
+      </article>
+
+      <!-- Subtopic 5 -->
+      <article class="domain-subtopic" id="sub-5">
+        <h3><span class="subtopic-num">05</span> Sri Lankan Weather Patterns and Monsoons</h3>
+        <p>
+          Sri Lanka's climate is characterized by two distinct monsoon seasons and two transitionary inter-monsoon periods:
+        </p>
+        <div class="grid grid-2" style="margin-top: 14px;">
+          <div class="card">
+            <h4 style="color:var(--cy)">Southwest Monsoon (May to September)</h4>
+            <p>Persistent, high-velocity maritime airflow from the Indian Ocean, characterized by frequent rain bands, strong gusting winds, and hazardous crosswind conditions at VCBI's Runway 04/22.</p>
+          </div>
+          <div class="card">
+            <h4 style="color:var(--am)">Northeast Monsoon (December to February)</h4>
+            <p>Continental wind flow from the Asian landmass bringing cooler and drier air, generating sharp diurnal temperature fluctuations, rapid barometric changes, and notable density altitude shifts.</p>
+          </div>
+          <div class="card">
+            <h4 style="color:var(--gr)">First Inter-Monsoon (March to April)</h4>
+            <p>Weak pressure gradients and light, shifting winds coupled with intense surface solar heating. Strong afternoon convection causes sudden cloud-base drops and localized squall lines.</p>
+          </div>
+          <div class="card">
+            <h4 style="color:#c4a7ff">Second Inter-Monsoon (October to November)</h4>
+            <p>High relative humidity, widespread cloudiness, and low barometric pressures, frequently producing early morning radiation fog and severe tropical thunderstorm complexes over western Sri Lanka.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Subtopic 6 -->
+      <article class="domain-subtopic" id="sub-6">
+        <h3><span class="subtopic-num">06</span> Literature Survey / Literature Review</h3>
+        <p>
+          The theoretical framework of this research is constructed upon an extensive review of international and Sri Lankan literature in machine learning, weather nowcasting, and aviation operations:
+        </p>
+        <div class="callout">
+          <h4>Key Academic Studies Reviewed</h4>
+          <ol style="padding-left: 20px; font-size: 14.5px; line-height: 1.8; color: var(--ink);">
+            <li><strong>Nagahamulla, Ratnayake, &amp; Ratnaweera (2011) [1]:</strong> Demonstrated the capability of Artificial Neural Networks (ANNs) for predicting monsoon rainfall patterns in Sri Lanka using teleconnection indices, confirming that seasonal climatic behavior contains non-linear patterns amenable to neural networks.</li>
+            <li><strong>Hennayake, Dinalankara, &amp; Mudunkotuwa (2021) [2]:</strong> Applied supervised machine learning algorithms to short-term general weather prediction in Sri Lanka, focusing on macro-scale precipitation and temperature rather than aerodrome-specific parameters.</li>
+            <li><strong>Maduranga &amp; Edirisinghe (2021) [3]:</strong> Examined the climatology of convective lightning activity specifically over Bandaranaike International Airport (VCBI), underscoring the severe operational impacts of localized convective systems.</li>
+            <li><strong>Gultepe et al. (2019) [4]:</strong> Published an exhaustive international review on high-impact aviation weather, highlighting that horizontal visibility, ceiling, and microscale wind gusts are the primary drivers of airport-level disruption and accident causation.</li>
+            <li><strong>Oo &amp; Oo (2022) [5]:</strong> Analyzed aviation weather hazards in the Yangon Flight Information Region, highlighting the dominant operational hazards of low cloud, sudden squalls, and fog in tropical monsoon aerodromes.</li>
+            <li><strong>Sládek (2025) [6]:</strong> Proposed an artificial intelligence framework for automated Terminal Aerodrome Forecast (TAF) generation, proving that machine learning can model discrete aviation categories such as wind speed and visibility thresholds.</li>
+            <li><strong>Shi et al. (2015) [7]:</strong> Formulated the Convolutional LSTM (ConvLSTM) network for radar precipitation nowcasting, demonstrating the vital importance of capturing both spatial and temporal dependencies.</li>
+            <li><strong>Dueben &amp; Bauer (2018) [9] &amp; Rasp &amp; Lerch (2018) [10]:</strong> Documented the design principles and post-processing strengths of deep learning ensembles in correcting numerical weather predictions.</li>
+            <li><strong>Hu, Zhang, &amp; Li (2021) [11]:</strong> Explored Random Forest ensembles in civil aviation flight delay forecasting, validating ensemble decision tree robustness in handling noisy civil aviation datasets.</li>
+            <li><strong>Boonyuen et al. (2016) [12]:</strong> Researched the impact of GPS radio occultation and meteorological observations on numerical weather prediction, highlighting data fidelity as the core determinant of forecast skill.</li>
+          </ol>
+        </div>
+      </article>
+
+      <!-- Subtopic 7 -->
+      <article class="domain-subtopic" id="sub-7">
+        <h3><span class="subtopic-num">07</span> Existing Approaches and Related Systems</h3>
+        <p>
+          Current airport weather forecasting relies primarily on two methodologies:
+        </p>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li><strong>Global Numerical Weather Prediction (NWP):</strong> Models such as NOAA's Global Forecast System (GFS) and the European Centre for Medium-Range Weather Forecasts (ECMWF) resolve atmospheric hydrodynamics across coarse horizontal grid resolutions (13–25 km). They fail to model microclimates formed by the runway surface, Negombo coastal lagoon, and coastal-inland thermal boundaries.</li>
+          <li><strong>Manual TAF Issuance:</strong> Aerodrome meteorologists manually interpret synoptic charts, satellite imagery, and NWP output to formulate standard TAF text forecasts every 6 hours. While expert-guided, this process is labor-intensive, cannot recalculate every hour dynamically, and lacks an automated closed-loop statistical verification mechanism against subsequent METARs.</li>
+        </ul>
+      </article>
+
+      <!-- Subtopic 8 -->
+      <article class="domain-subtopic" id="sub-8">
+        <h3><span class="subtopic-num">08</span> Research Gap</h3>
+        <div class="callout callout-am">
+          <h4>Identified Scientific Gap</h4>
+          <p>
+            Existing Sri Lankan meteorological research focuses almost exclusively on broad regional rainfall forecasting and agricultural water management [1], [2]. Conversely, international aviation studies focus on temperate mid-latitude aerodromes [4], [6]. No prior published study has:
+          </p>
+          <ol style="padding-left: 20px; margin-top: 8px; line-height: 1.7;">
+            <li>Jointly predicted the complete set of primary surface aviation parameters (wind speed/direction, temperature, barometric pressure/QNH, dew point, relative humidity, cloud status, and horizontal visibility) at a dedicated tropical airport (VCBI);</li>
+            <li>Tailored machine learning architectures explicitly to the four distinct Sri Lankan monsoon regimes; and</li>
+            <li>Coupled machine learning outputs with standard aerodynamic physical formulas (Density Altitude, Runway 04 Headwind/Crosswind) while maintaining an automated, continuous verification feedback loop against live METAR observations.</li>
+          </ol>
+        </div>
+      </article>
+
+      <!-- Subtopic 9 -->
+      <article class="domain-subtopic" id="sub-9">
+        <h3><span class="subtopic-num">09</span> Research Problem</h3>
+        <p>
+          Commercial aviation at Bandaranaike International Airport (VCBI) lacks a localized, high-resolution, short-term (T+3h) weather forecasting mechanism capable of rapidly updating between official TAF cycles, adapting to sharp monsoon-induced changes, converting predicted meteorology into actionable flight safety parameters, and automatically measuring its own predictive error against realized ground truth observations.
+        </p>
+      </article>
+
+      <!-- Subtopic 10 -->
+      <article class="domain-subtopic" id="sub-10">
+        <h3><span class="subtopic-num">10</span> Research Aim</h3>
+        <p>
+          To design, implement, and rigorously evaluate a hyper-local aviation weather forecasting and automated verification system tailored to Sri Lankan monsoon conditions at Bandaranaike International Airport (VCBI), delivering pilot-ready aeronautical safety metrics and continuous MLOps-driven forecast verification.
+        </p>
+      </article>
+
+      <!-- Subtopic 11 -->
+      <article class="domain-subtopic" id="sub-11">
+        <h3><span class="subtopic-num">11</span> Research Objectives</h3>
+        <ol style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li>Acquire, clean, chronologically organize, and engineer domain features from over 120,000 historical VCBI METAR records (2019–2026) and ingest hourly live AWC data.</li>
+          <li>Develop a hybrid Random Forest + LSTM model to forecast temperature and QNH at T+3h, translating outputs into Pressure Altitude and Density Altitude categories.</li>
+          <li>Develop an ensemble XGBoost + Temporal Fusion Transformer (TFT) model using cyclic angle vectors to forecast runway wind speed and direction within ICAO tolerance (&lt;2.5 kt).</li>
+          <li>Develop a gradient boosted XGBoost model to classify cloud ceiling status and predict horizontal runway visibility in meters.</li>
+          <li>Develop a LightGBM model combined with the August-Roche-Magnus thermodynamic equation to forecast QNH and dew point while physically deriving Relative Humidity and radiation fog risk.</li>
+          <li>Establish an automated verification engine that calculates MAE, RMSE, and R² against realized observations and initiates monthly model retraining.</li>
+        </ol>
+      </article>
+
+      <!-- Subtopic 12 -->
+      <article class="domain-subtopic" id="sub-12">
+        <h3><span class="subtopic-num">12</span> Research Questions</h3>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li><strong>RQ1:</strong> How can recurrent sequence models (LSTM, TFT) and tree-based gradient ensembles (XGBoost, LightGBM, RF) be combined to improve short-term (T+3h) aviation weather prediction over standalone baselines?</li>
+          <li><strong>RQ2:</strong> How effectively can cyclic trigonometric transformations (sine/cosine) preserve angular continuity (359° to 001°) in airport wind vector forecasting?</li>
+          <li><strong>RQ3:</strong> Does deriving Relative Humidity via physical thermodynamic equations (August-Roche-Magnus) prevent physical inconsistencies compared to training separate uncoupled machine learning models?</li>
+          <li><strong>RQ4:</strong> Can an automated closed-loop MLOps verification pipeline effectively mitigate concept drift caused by Sri Lanka's seasonal monsoon shifts?</li>
+        </ul>
+      </article>
+
+      <!-- Subtopic 13 -->
+      <article class="domain-subtopic" id="sub-13">
+        <h3><span class="subtopic-num">13</span> Research Methodology</h3>
+        <p>
+          The research follows an applied quantitative engineering methodology divided into six modular phases:
+        </p>
+        <div class="grid grid-3" style="margin-top: 14px;">
+          <div class="card">
+            <h4>Phase 1: Ingestion</h4>
+            <p>Chronological extraction of historical records (2019–2026) and continuous hourly telemetry ingestion from Aviation Weather Center via APScheduler background tasks.</p>
+          </div>
+          <div class="card">
+            <h4>Phase 2: Feature Engineering</h4>
+            <p>Extraction of cyclic temporal features, lag variables (T-1, T-2, T-3), 6-hour rolling statistics, dew point depression, and meteorological interaction terms.</p>
+          </div>
+          <div class="card">
+            <h4>Phase 3: Model Training</h4>
+            <p>Strict chronological train/test splitting (80/20) without random shuffling to avoid lookahead bias. Hyperparameter optimization using Grid Search and 3-fold cross-validation.</p>
+          </div>
+          <div class="card">
+            <h4>Phase 4: Aeronautical Translation</h4>
+            <p>Application of FAA and ICAO physical equations to translate raw predicted scalars into operational indicators: DA, Runway 04 HW/CW, and fog threat indices.</p>
+          </div>
+          <div class="card">
+            <h4>Phase 5: Verification</h4>
+            <p>As future METAR data arrives, prediction logs are automatically matched with ground truth to log regression metrics (MAE, RMSE, R²) and classification confusion matrices.</p>
+          </div>
+          <div class="card">
+            <h4>Phase 6: Deployment &amp; MLOps</h4>
+            <p>Decoupled microservice deployment via FastAPI and Flask, synchronized through Supabase and SQLite, with scheduled hot-reload retraining.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Subtopic 14 -->
+      <article class="domain-subtopic" id="sub-14">
+        <h3><span class="subtopic-num">14</span> Proposed System Architecture</h3>
+        <p>
+          The system architecture follows a decoupled plugin-based service design ensuring high availability and fault isolation. The core dataflow is organized into three architectural layers:
+        </p>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 20px;">
+          <li><strong>Data Ingestion &amp; Storage Tier:</strong> Live METAR parser backed by an SQLite local cache and Supabase cloud PostgreSQL database with a 48-hour data retention security net.</li>
+          <li><strong>Analytical &amp; Machine Learning Tier:</strong> Four independent model microservices (FastAPI and Flask endpoints) that load serialized model artifacts, generate inference vectors, and execute aerodynamic formulas.</li>
+          <li><strong>Presentation &amp; Verification Tier:</strong> Pilot decision portal and air traffic controllers' dashboard displaying runway crosswind alert levels, density altitude bars, and live verification error tracking.</li>
+        </ul>
+
+        <figure class="academic-figure" style="margin: 24px 0;">
+          <div class="console-frame" style="margin: 0;" onclick="openImageModal('img/system-dashboard.png', 'Figure 14.1: Operational Forecaster Console (VCBI)')" title="Click to enlarge">
+            <div class="console-titlebar">
+              <div class="console-dots">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              </div>
+              <div class="console-url"><span>VCBI Weather Intelligence — Forecaster Console (Operational Prototype)</span></div>
+              <div class="console-badge">VCBI / COLOMBO FIR</div>
+            </div>
+            <div class="console-screen">
+              <img src="img/system-dashboard.png" alt="Bandaranaike International Airport VCBI Forecaster Console" class="console-img">
+              <div class="console-zoom-hint">🔍 Click to zoom</div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>Figure 14.1:</strong> Real-time operational forecaster console developed for Bandaranaike International Airport (VCBI / Colombo FIR). Displays live meteorological observation context (Temperature 25°C, QNH 1012 hPa, Visibility 9999m, Humidity 94.19%, Wind 4kt @ 050°, Cloud Base SCT016, Dew Point 24°C) and the automated T+3h predictive inference interface.
+          </figcaption>
+        </figure>
+      </article>
+
+      <!-- Subtopic 15 -->
+      <article class="domain-subtopic" id="sub-15">
+        <h3><span class="subtopic-num">15</span> Data Collection</h3>
+        <p>
+          The primary training corpus comprises <strong>over 120,000 meteorological records</strong> collected at Bandaranaike International Airport (VCBI) across the 7-year span from <strong>2019 to 2026</strong>, secured through the Sri Lanka Department of Meteorology.
+        </p>
+        <p>
+          Real-time inference and verification data are harvested automatically on an hourly schedule from the Aviation Weather Center (AWC) international feed, covering runway surface wind speed, wind direction, temperature, dew point, barometric pressure (QNH), cloud cover status, and horizontal visibility.
+        </p>
+      </article>
+
+      <!-- Subtopic 16 -->
+      <article class="domain-subtopic" id="sub-16">
+        <h3><span class="subtopic-num">16</span> Data Preprocessing and Feature Engineering</h3>
+        <p>
+          Meteorological data requires rigorous preprocessing to account for physical constraints:
+        </p>
+        <ul style="padding-left: 24px; color: var(--mute); line-height: 1.8; margin-bottom: 16px;">
+          <li><strong>Chronological Ordering &amp; Imputation:</strong> All timestamps are normalized to UTC. Missing values are imputed using forward-fill to maintain temporal validity without leaking future state.</li>
+          <li><strong>Cyclic Angular Encodings:</strong> Wind direction ($\theta$) and hour of day ($H$) are transformed into orthogonal sine and cosine pairs:
+            <br><code>Wind_x = sin(2π · θ / 360)</code>, <code>Wind_y = cos(2π · θ / 360)</code>
+            <br>This ensures 359° and 001° are mathematically adjacent rather than opposing extremes.</li>
+          <li><strong>Dew Point Depression:</strong> Computed as <code>(Dry Bulb Temp - Dew Point Temp)</code>, acting as a direct physical indicator of atmospheric moisture saturation and air density.</li>
+          <li><strong>Rolling Trends &amp; Interaction Variables:</strong> 3-hour and 6-hour moving averages, barometric momentum (rate of pressure change), temperature-humidity interactions, and squared relative humidity terms.</li>
+        </ul>
+      </article>
+
+      <!-- Subtopic 17 -->
+      <article class="domain-subtopic" id="sub-17">
+        <h3><span class="subtopic-num">17</span> Machine Learning Model Development</h3>
+        <p>
+          The four specialized model pipelines were trained, tuned, and evaluated as follows:
+        </p>
+        
+        <div class="card" style="margin-bottom: 16px;">
+          <h4 style="color:var(--cy)">A. Temperature &amp; Pressure (RF + LSTM Hybrid)</h4>
+          <p>
+            Random Forest (RF) captures non-linear cross-variable interactions between humidity, wind, and lagged temperature. Concurrently, a Long Short-Term Memory (LSTM) network with a 6-hour lookback window captures sequential atmospheric persistence. Outputs are combined into a joint T+3h forecast of temperature and QNH.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 16px;">
+          <h4 style="color:var(--am)">B. Wind Speed &amp; Direction (XGBoost + TFT Ensemble)</h4>
+          <p>
+            Extreme Gradient Boosting (XGBoost) trained via 3-fold cross-validation with tuned hyperparameters (<code>n_estimators: 300–1000</code>, <code>max_depth: 5–9</code>, <code>learning_rate: 0.01–0.05</code>) provides rapid 1-hour nowcasts. A Temporal Fusion Transformer (TFT) with 32 hidden units, 12-hour encoder lookback, and attention mechanisms models the longer 3-hour forecast horizon.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 16px;">
+          <h4 style="color:var(--gr)">C. Cloud &amp; Visibility (Dual XGBoost Models)</h4>
+          <p>
+            Two dedicated models: an XGBoost Classifier for cloud coverage category and an XGBoost Regressor for runway horizontal visibility distance in meters, utilizing interaction features between barometric pressure and wind speed.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 style="color:#c4a7ff">D. QNH, Dew Point &amp; RH (LightGBM + Thermodynamic Coupling)</h4>
+          <p>
+            Two separate LightGBM models forecast T+3h QNH and dew point. Relative Humidity (RH) is then derived directly using the August-Roche-Magnus thermodynamic equation:
+            <br><code>RH = 100 · exp[(17.67 · Td / (Td + 243.5)) - (17.67 · T / (T + 243.5))]</code>
+            <br>Eliminating the error drift of an unconstrained standalone RH regressor.
+          </p>
+        </div>
+      </article>
+
+      <!-- Subtopic 18 -->
+      <article class="domain-subtopic" id="sub-18">
+        <h3><span class="subtopic-num">18</span> Model Evaluation &amp; Experimental Results</h3>
+        <p>
+          Experimental evaluations verified models against actual holdout test observations at VCBI:
+        </p>
+
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Subsystem / Parameter</th>
+                <th>Evaluated Models</th>
+                <th>Primary Accuracy / R²</th>
+                <th>Primary Error (MAE)</th>
+                <th>Operational Context</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Temperature &amp; Pressure</strong></td>
+                <td>LSTM Alone<br>Random Forest<br><strong>Hybrid RF + LSTM</strong></td>
+                <td>R²: 0.25<br>R²: 0.68<br><strong>R²: 0.84</strong></td>
+                <td>MAE: n/a<br>MAE: n/a<br><strong>MAE: ~0.86</strong></td>
+                <td>Ensemble significantly outperforms single models for T+3h horizon.</td>
+              </tr>
+              <tr>
+                <td><strong>Wind Speed &amp; Direction</strong></td>
+                <td>XGBoost (1-hour nowcast)<br>TFT (3-hour forecast)<br><strong>Hybrid Ensemble</strong></td>
+                <td>R²: 0.78<br>Attention weights<br><strong>Ensemble</strong></td>
+                <td>MAE: 1.69 kt<br>MAE: 1.05 kt<br><strong>MAE: &lt;1.00 kt</strong></td>
+                <td>Well within ICAO surface-wind verification tolerance of 2.5 to 5.0 kt.</td>
+              </tr>
+              <tr>
+                <td><strong>Cloud Cover Status</strong></td>
+                <td>Decision Tree<br>Random Forest<br><strong>XGBoost</strong></td>
+                <td>76.25%<br>76.31%<br><strong>78.15%</strong></td>
+                <td>MAE: 485.1<br>MAE: 482.9<br><strong>MAE: 347.7</strong></td>
+                <td>XGBoost reduced MAE by about 28.3% compared to the Decision Tree (paper).</td>
+              </tr>
+              <tr>
+                <td><strong>Dew Point &amp; QNH</strong></td>
+                <td><strong>LightGBM</strong><br>+ Thermodynamic Formula</td>
+                <td>Dew Point R²: <strong>0.66</strong><br>Physical RH</td>
+                <td>Dew Point MAE: <strong>0.58 °C</strong><br>QNH MAE: <strong>≈1.8 hPa</strong></td>
+                <td>Physical coupling preserves atmospheric moisture equilibrium.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- Subtopic 19 -->
+      <article class="domain-subtopic" id="sub-19">
+        <h3><span class="subtopic-num">19</span> Technologies Used</h3>
+        <p>
+          The system leverages modern, open-source scientific and data engineering technologies:
+        </p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;">
+          <span class="badge">Python 3.11</span>
+          <span class="badge">scikit-learn</span>
+          <span class="badge">XGBoost</span>
+          <span class="badge">LightGBM</span>
+          <span class="badge">PyTorch</span>
+          <span class="badge">PyTorch Forecasting</span>
+          <span class="badge">TensorFlow / Keras</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">Flask</span>
+          <span class="badge">SQLite</span>
+          <span class="badge">Supabase (PostgreSQL)</span>
+          <span class="badge">APScheduler</span>
+          <span class="badge">React</span>
+          <span class="badge">Streamlit</span>
+        </div>
+      </article>
+
+      <!-- Subtopic 20 -->
+      <article class="domain-subtopic" id="sub-20">
+        <h3><span class="subtopic-num">20</span> Expected and Actual Research Contributions</h3>
+        <p>
+          The completed research delivers four tangible contributions to aviation meteorology in Sri Lanka:
+        </p>
+        <div class="grid grid-2" style="margin-top: 14px;">
+          <div class="card">
+            <h4>1. Operational Density Altitude (DA) Modeling</h4>
+            <p>
+              Automates the conversion of predicted temperature and QNH into Pressure Altitude and Density Altitude at VCBI:
+              <br><code>PA = (1013.25 - Predicted_QNH) · 30</code>
+              <br><code>ISA_Temp = 15 - [2 · (PA / 1000)]</code>
+              <br><code>ISA_Dev = Predicted_Temp - ISA_Temp</code>
+              <br><code>DA = PA + (118.8 · ISA_Dev)</code>
+              <br>Provides automated warnings for Normal, Elevated, and Critical takeoff density stages.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>2. Runway-Oriented Wind Vector Decomposition</h4>
+            <p>
+              Wind direction and velocity are resolved relative to Runway 04 heading (040°):
+              <br><code>Angle θ = |Wind_Dir - 040°|</code>
+              <br><code>Headwind (HW) = V · cos(θ)</code>
+              <br><code>Crosswind (CW) = V · sin(θ)</code>
+              <br>Gives direct situational awareness for safe approach and landing flap settings.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>3. Radiation Fog Thermodynamic Warning Rule</h4>
+            <p>
+              Establishes a localized physical heuristic validated against VCBI climatology: a temperature drop ≥1.0 °C within 3 hours accompanied by QNH ≥1012.0 hPa triggers early fog and ceiling deterioration alerts.
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>4. Continuous MLOps Verification Feedback Loop</h4>
+            <p>
+              Unlike static academic models, this implementation provides an automated pipeline that continuously scores every prediction against subsequent real-world METAR telemetry, logging performance drift and triggering monthly hot-reload retraining.
+            </p>
+          </div>
+        </div>
+      </article>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Hyper-Local Aviation Weather Forecast Verification System for Sri Lankan Monsoon Patterns</h4>
+          <p>
+            An academic research project undertaken at the Centre of Excellence for AI (CoEAI), Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT).
+          </p>
+          <div class="footer-meta">
+            Project Code: <strong>R26-IT-132</strong> · Target Aerodrome: <strong>VCBI (Katunayake)</strong>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Website Sections</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain Review</a></li>
+            <li><a href="milestones.html">Milestones Timeline</a></li>
+            <li><a href="documents.html">Documents Repository</a></li>
+            <li><a href="presentations.html">Past Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Research Group R26-IT-132 · SLIIT Faculty of Computing</div>
+        <div>Academic Research Project Information Website</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
