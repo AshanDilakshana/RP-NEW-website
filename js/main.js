@@ -51,6 +51,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---------- Global Accordion Toggle ----------
+  document.addEventListener('click', function (e) {
+    var header = e.target.closest('.accordion-header');
+    if (!header) return;
+    // Don't trigger if user clicked an inner button or link inside header
+    if (e.target.closest('a, button:not(.accordion-header)')) return;
+    var card = header.closest('.accordion-card');
+    if (card) {
+      var isOpen = card.classList.toggle('open');
+      header.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+  });
+
   // ---------- Compact header + back to top ----------
   var toTop = document.createElement('button');
   toTop.className = 'icon-btn to-top';

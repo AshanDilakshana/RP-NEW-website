@@ -66,151 +66,261 @@
   <main class="page-content">
     <div class="container">
 
-      <div class="grid" style="gap: 24px;">
+      <!-- KPI Summary Pills -->
+      <div class="assessment-stats" style="margin-bottom: 24px;">
+        <div class="assessment-pill">
+          <b>4</b> Presentations
+        </div>
+        <div class="assessment-pill pill-completed">
+          <b>3</b> Completed
+        </div>
+        <div class="assessment-pill pill-upcoming">
+          <b>1</b> Upcoming
+        </div>
+        <div class="assessment-pill" style="border-color: var(--primary-soft);">
+          <b>3</b> Slide Decks Available
+        </div>
+      </div>
+
+      <!-- Timeline of Presentation Accordion Cards (Matching Reference UI) -->
+      <div class="timeline" id="presentations-timeline">
 
         <!-- Presentation 1: Proposal Presentation -->
-        <div class="card" style="padding: 28px;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
-            <div>
-              <span class="badge badge-gr">Delivered</span>
-              <h3 style="margin-top: 8px;">Project Proposal Presentation</h3>
-            </div>
-            <div style="font-family: var(--font-m); font-size: 13px; color: var(--accent-strong); background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; font-weight: 800;">
-              17 March 2026 · Gate 2 (Proposal Review)
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-marker done">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
+          <div class="accordion-card open">
+            <div class="accordion-header" role="button" aria-expanded="true">
+              <div class="accordion-title-wrap">
+                <h3 class="accordion-title">Project Proposal Presentation</h3>
+                <div class="accordion-date-line">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>17 March 2026</span>
+                </div>
+              </div>
+              <div class="accordion-meta-wrap">
+                <span class="pill-status completed"><span class="status-dot green"></span> Completed</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </div>
 
-          <p>
-            <strong>Description:</strong> Introduction of the research problem at Bandaranaike International Airport (VCBI), critical review of synoptic NWP limitations versus airport-level needs, individual machine learning subsystem allocation across the four monsoon periods, initial Gantt chart, and project governance structure.
-          </p>
+            <div class="accordion-body">
+              <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
+                Introduction of the research problem at Bandaranaike International Airport (VCBI), critical review of synoptic NWP limitations versus airport-level needs, individual machine learning subsystem allocation across the four monsoon periods, initial Gantt chart, and project governance structure.
+              </p>
 
-          <div class="table-responsive" style="margin: 16px 0;">
-            <table class="academic-table">
-              <thead>
-                <tr>
-                  <th>Deliverable Title</th>
-                  <th>Format</th>
-                  <th>File Size</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Proposal-Presentation-R26-IT-132.pptx</strong></td>
-                  <td><span class="badge badge-pptx">PPTX</span></td>
-                  <td>14.7 MB</td>
-                  <td>
-                    <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">⬇ Download (Drive) ↗</a>
-                    <button class="btn btn-sm" onclick="openDocPreview('preview/Proposal-Presentation-R26-IT-132.pdf', 'Proposal Presentation Slides (PDF Preview)', 'https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing')">View PDF Preview ↗</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <!-- Dual Metric Cards: DATE & STAGE -->
+              <div class="milestone-metrics-grid">
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>DATE &amp; GATE</span>
+                  </div>
+                  <div class="metric-box-val">17 March 2026 · Gate 2</div>
+                </div>
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>STATUS</span>
+                  </div>
+                  <div class="metric-box-val" style="color: #16A34A;">Completed · Proposal Review</div>
+                </div>
+              </div>
+
+              <!-- Presentation Deliverables Box -->
+              <div class="milestone-deliverables-box">
+                <div class="milestone-deliverables-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 2v7h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Presentation Slides Deliverable (PPTX · 14.7 MB)</span>
+                </div>
+                <div class="milestone-deliverables-grid">
+                  <a href="https://drive.google.com/open?id=1BPB3UzX5uLgWcFhfOkvYFzOHJDHecOofeEQfmU_43Co" target="_blank" rel="noopener" class="btn btn-sm btn-primary">⬇ Download Slides (Drive) ↗</a>
+                  <button type="button" class="btn btn-sm" onclick="openDocPreview('preview/Proposal-Presentation-R26-IT-132.pdf', 'Proposal Presentation Slides (PDF Preview)', 'https://drive.google.com/open?id=1BPB3UzX5uLgWcFhfOkvYFzOHJDHecOofeEQfmU_43Co')">👁 View PDF Preview ↗</button>
+                  <a href="milestones.html" class="btn btn-sm">📋 View Faculty Panel Feedback →</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Presentation 2: Progress Presentation 1 -->
-        <div class="card" style="padding: 28px;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
-            <div>
-              <span class="badge badge-gr">Delivered</span>
-              <h3 style="margin-top: 8px;">Progress Presentation 1 (PP1)</h3>
-            </div>
-            <div style="font-family: var(--font-m); font-size: 13px; color: var(--accent-strong); background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; font-weight: 800;">
-              12 May 2026 · Gate 3 (50% Progress Review)
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-marker done">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
+          <div class="accordion-card">
+            <div class="accordion-header" role="button" aria-expanded="false">
+              <div class="accordion-title-wrap">
+                <h3 class="accordion-title">Progress Presentation 1 (PP1)</h3>
+                <div class="accordion-date-line">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>12 May 2026</span>
+                </div>
+              </div>
+              <div class="accordion-meta-wrap">
+                <span class="pill-status completed"><span class="status-dot green"></span> Completed</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </div>
 
-          <p>
-            <strong>Description:</strong> Presentation of historical dataset curation (over 120,000 meteorological records from 2019 to 2026), feature engineering strategies (cyclic vector encodings and dew-point depressions), preliminary standalone machine learning baselines, and prototype system design.
-          </p>
+            <div class="accordion-body">
+              <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
+                Presentation of historical dataset curation (over 120,000 meteorological records from 2019 to 2026), feature engineering strategies (cyclic vector encodings and dew-point depressions), preliminary standalone machine learning baselines, and prototype system design.
+              </p>
 
-          <div class="table-responsive" style="margin: 16px 0;">
-            <table class="academic-table">
-              <thead>
-                <tr>
-                  <th>Deliverable Title</th>
-                  <th>Format</th>
-                  <th>File Size</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Progress-Presentation-1-R26-IT-132.pptx</strong></td>
-                  <td><span class="badge badge-pptx">PPTX</span></td>
-                  <td>5.5 MB</td>
-                  <td>
-                    <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">⬇ Download (Drive) ↗</a>
-                    <button class="btn btn-sm" onclick="openDocPreview('preview/Progress-Presentation-1-R26-IT-132.pdf', 'Progress Presentation 1 Slides (PDF Preview)', 'https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing')">View PDF Preview ↗</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <!-- Dual Metric Cards: DATE & STAGE -->
+              <div class="milestone-metrics-grid">
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>DATE &amp; GATE</span>
+                  </div>
+                  <div class="metric-box-val">12 May 2026 · Gate 3</div>
+                </div>
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>STATUS</span>
+                  </div>
+                  <div class="metric-box-val" style="color: #16A34A;">Completed · 50% Progress Review</div>
+                </div>
+              </div>
+
+              <!-- Presentation Deliverables Box -->
+              <div class="milestone-deliverables-box">
+                <div class="milestone-deliverables-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 2v7h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Presentation Slides Deliverable (PPTX · 5.5 MB)</span>
+                </div>
+                <div class="milestone-deliverables-grid">
+                  <a href="https://docs.google.com/presentation/d/1gEpRT9pZsk_pbUWqoOhgq9cxCqYHtlmEl08ocVJq4bQ/edit?usp=drive_web" target="_blank" rel="noopener" class="btn btn-sm btn-primary">⬇ Download Slides (Drive) ↗</a>
+                  <button type="button" class="btn btn-sm" onclick="openDocPreview('preview/Progress-Presentation-1-R26-IT-132.pdf', 'Progress Presentation 1 Slides (PDF Preview)', 'https://docs.google.com/presentation/d/1gEpRT9pZsk_pbUWqoOhgq9cxCqYHtlmEl08ocVJq4bQ/edit?usp=drive_web')">👁 View PDF Preview ↗</button>
+                  <a href="milestones.html" class="btn btn-sm">📋 View Faculty Panel Feedback →</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Presentation 3: Progress Presentation 2 -->
-        <div class="card" style="padding: 28px;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
-            <div>
-              <span class="badge badge-gr">Delivered</span>
-              <h3 style="margin-top: 8px;">Progress Presentation 2 (PP2)</h3>
-            </div>
-            <div style="font-family: var(--font-m); font-size: 13px; color: var(--accent-strong); background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; font-weight: 800;">
-              2 September 2026 · Gate 4 (90% Integration Review)
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-marker done">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
+          <div class="accordion-card">
+            <div class="accordion-header" role="button" aria-expanded="false">
+              <div class="accordion-title-wrap">
+                <h3 class="accordion-title">Progress Presentation 2 (PP2)</h3>
+                <div class="accordion-date-line">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>2 September 2026</span>
+                </div>
+              </div>
+              <div class="accordion-meta-wrap">
+                <span class="pill-status completed"><span class="status-dot green"></span> Completed</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </div>
 
-          <p>
-            <strong>Description:</strong> Live demonstration of end-to-end integration: hourly automated METAR telemetry ingestion from AWC via APScheduler, Supabase PostgreSQL synchronization, decoupled FastAPI/Flask microservice execution, aerodynamic conversions (Runway 04 headwind/crosswind and density altitude), and live forecast verification against ground truth observations.
-          </p>
+            <div class="accordion-body">
+              <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
+                Live demonstration of end-to-end integration: hourly automated METAR telemetry ingestion from AWC via APScheduler, Supabase PostgreSQL synchronization, decoupled FastAPI/Flask microservice execution, aerodynamic conversions (Runway 04 headwind/crosswind and density altitude), and live forecast verification against ground truth observations.
+              </p>
 
-          <div class="table-responsive" style="margin: 16px 0;">
-            <table class="academic-table">
-              <thead>
-                <tr>
-                  <th>Deliverable Title</th>
-                  <th>Format</th>
-                  <th>File Size</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Progress-Presentation-2-R26-IT-132.pptx</strong></td>
-                  <td><span class="badge badge-pptx">PPTX</span></td>
-                  <td>25.6 MB</td>
-                  <td>
-                    <a href="https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing" target="_blank" rel="noopener" class="btn btn-sm btn-primary">⬇ Download (Drive) ↗</a>
-                    <button class="btn btn-sm" onclick="openDocPreview('preview/Progress-Presentation-2-R26-IT-132.pdf', 'Progress Presentation 2 Slides (PDF Preview)', 'https://drive.google.com/drive/folders/15jPRr4kKpi_Cq7aian5UC9jXBJKNIt82?usp=sharing')">View PDF Preview ↗</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <!-- Dual Metric Cards: DATE & STAGE -->
+              <div class="milestone-metrics-grid">
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>DATE &amp; GATE</span>
+                  </div>
+                  <div class="metric-box-val">2 September 2026 · Gate 4</div>
+                </div>
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>STATUS</span>
+                  </div>
+                  <div class="metric-box-val" style="color: #16A34A;">Completed · 90% Integration Review</div>
+                </div>
+              </div>
+
+              <!-- Presentation Deliverables Box -->
+              <div class="milestone-deliverables-box">
+                <div class="milestone-deliverables-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 2v7h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Presentation Slides Deliverable (PPTX · 25.6 MB)</span>
+                </div>
+                <div class="milestone-deliverables-grid">
+                  <a href="https://docs.google.com/presentation/d/1clSQLz6muD_YaVE7vDwxLJhh-IdygLjl1g5kvg9J-1k/edit?usp=drive_web" target="_blank" rel="noopener" class="btn btn-sm btn-primary">⬇ Download Slides (Drive) ↗</a>
+                  <button type="button" class="btn btn-sm" onclick="openDocPreview('preview/Progress-Presentation-2-R26-IT-132.pdf', 'Progress Presentation 2 Slides (PDF Preview)', 'https://docs.google.com/presentation/d/1clSQLz6muD_YaVE7vDwxLJhh-IdygLjl1g5kvg9J-1k/edit?usp=drive_web')">👁 View PDF Preview ↗</button>
+                  <a href="milestones.html" class="btn btn-sm">📋 View Faculty Panel Feedback →</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Presentation 4: Final Presentation (Honest Academic Placeholder) -->
-        <div class="card" style="padding: 28px; border-left: 4px solid var(--am);">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
-            <div>
-              <span class="badge badge-am">Final Stage</span>
-              <h3 style="margin-top: 8px;">Final Assessment &amp; Research Viva Presentation</h3>
-            </div>
-            <div style="font-family: var(--font-m); font-size: 13px; color: var(--accent-strong); background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; font-weight: 800;">
-              20 October 2026 · Final Defense
-            </div>
+        <!-- Presentation 4: Final Presentation -->
+        <div class="timeline-item">
+          <div class="timeline-marker upcoming">
+            <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
+          <div class="accordion-card">
+            <div class="accordion-header" role="button" aria-expanded="false">
+              <div class="accordion-title-wrap">
+                <h3 class="accordion-title">Final Assessment &amp; Research Viva Presentation</h3>
+                <div class="accordion-date-line">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>20 October 2026</span>
+                </div>
+              </div>
+              <div class="accordion-meta-wrap">
+                <span class="pill-status upcoming"><span class="status-dot amber"></span> Upcoming</span>
+                <span class="accordion-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </div>
+            </div>
 
-          <p>
-            <strong>Description:</strong> The culminating defense slide deck summarizing the complete research trajectory: theoretical literature contributions, model validation benchmarks against ICAO standards, MLOps continuous retraining architecture, and future research recommendations.
-          </p>
-          <div class="callout" style="margin-top: 14px;">
-            <h4>Submission Notice</h4>
-            <p>
-              In strict adherence to academic honesty requirements, this entry is maintained as a verified placeholder. The finalized slide deck will be uploaded and linked here immediately following final submission confirmation before the oral viva defense.
-            </p>
+            <div class="accordion-body">
+              <p style="margin-top: 4px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">
+                The culminating defense slide deck summarizing the complete research trajectory: theoretical literature contributions, model validation benchmarks against ICAO standards, MLOps continuous retraining architecture, and future research recommendations.
+              </p>
+
+              <!-- Dual Metric Cards: DATE & STAGE -->
+              <div class="milestone-metrics-grid">
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>DATE &amp; GATE</span>
+                  </div>
+                  <div class="metric-box-val">20 October 2026 · Gate 5 &amp; 6</div>
+                </div>
+                <div class="milestone-metric-box">
+                  <div class="metric-box-label">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>STATUS</span>
+                  </div>
+                  <div class="metric-box-val" style="color: #D97706;">Upcoming · Final Defense</div>
+                </div>
+              </div>
+
+              <!-- Notice Callout -->
+              <div class="callout" style="margin-top: 14px;">
+                <h4>Submission Notice</h4>
+                <p>
+                  In strict adherence to academic honesty requirements, this entry is maintained as a verified placeholder. The finalized slide deck will be uploaded and linked here immediately following final submission confirmation before the oral viva defense.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
