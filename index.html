@@ -23,22 +23,22 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body id="top">
   <!-- Header / Navigation -->
   <header class="site-header" id="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="R26-IT-132 home">
+      <a class="brand" href="#top" aria-label="R26-IT-132 home">
         <img src="img/logo.png" alt="Sri Lanka Met Aviation Logo" class="brand-logo-img">
         <span class="brand-text"><span>Sri Lanka Met Aviation</span><small>R26-IT-132 · Aviation Weather Intelligence</small></span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="domain.html">Domain</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="presentations.html">Presentations</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#top" aria-current="page">Home</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#subsystems">AI Models</a></li>
+        <li><a href="#console">Console</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#lifecycle">Stages</a></li>
       </ul>
       <div class="nav-actions">
         <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">&#9790;</button>
@@ -57,9 +57,9 @@
           For Sri Lankan Monsoon Patterns: multi-model machine learning, aviation physics and automated verification for Bandaranaike International Airport (VCBI).
         </p>
         <div class="hero-actions">
-          <a href="domain.html" class="btn btn-primary">Explore the Research →</a>
-          <a href="documents.html" class="btn btn-outline">Research Documents</a>
-          <a href="presentations.html" class="btn btn-outline">Slides</a>
+          <a href="#abstract" class="btn btn-primary">Explore the Research ↓</a>
+          <a href="#subsystems" class="btn btn-outline">Forecasting Models ↓</a>
+          <a href="#console" class="btn btn-outline">Operational Console ↓</a>
         </div>
       </div>
 
@@ -84,10 +84,10 @@
           </div>
         </div>
         <div class="chips-wrap">
-          <a class="chip-float chip-1" href="domain.html#sub-17" style="text-decoration:none"><span class="chip-ico">T</span><span><b>Temp &amp; Pressure</b><small>Hybrid RF + LSTM</small></span></a>
-          <a class="chip-float chip-2" href="domain.html#sub-17" style="text-decoration:none"><span class="chip-ico">W</span><span><b>Wind Patterns</b><small>XGBoost + TFT</small></span></a>
-          <a class="chip-float chip-3" href="domain.html#sub-17" style="text-decoration:none"><span class="chip-ico">C</span><span><b>Cloud &amp; Visibility</b><small>XGBoost</small></span></a>
-          <a class="chip-float chip-4" href="domain.html#sub-17" style="text-decoration:none"><span class="chip-ico">Q</span><span><b>QNH, Dew Point &amp; RH</b><small>LightGBM</small></span></a>
+          <a class="chip-float chip-1" href="#subsystems" style="text-decoration:none"><span class="chip-ico">T</span><span><b>Temp &amp; Pressure</b><small>Hybrid RF + LSTM</small></span></a>
+          <a class="chip-float chip-2" href="#subsystems" style="text-decoration:none"><span class="chip-ico">W</span><span><b>Wind Patterns</b><small>XGBoost + TFT</small></span></a>
+          <a class="chip-float chip-3" href="#subsystems" style="text-decoration:none"><span class="chip-ico">C</span><span><b>Cloud &amp; Visibility</b><small>XGBoost</small></span></a>
+          <a class="chip-float chip-4" href="#subsystems" style="text-decoration:none"><span class="chip-ico">Q</span><span><b>QNH, Dew Point &amp; RH</b><small>LightGBM</small></span></a>
         </div>
       </div>
     </div>
@@ -98,7 +98,7 @@
     <div class="container">
 
       <!-- Abstract Section -->
-      <section style="margin-bottom: 56px;">
+      <section id="abstract" style="margin-bottom: 56px;">
         <div class="card" style="padding: 32px; border-left: 4px solid var(--cy);">
           <span class="section-tag">Executive Summary</span>
           <h2>Research Abstract</h2>
@@ -109,7 +109,7 @@
       </section>
 
       <!-- Key Project Statistics -->
-      <section style="margin-bottom: 56px;">
+      <section id="stats" style="margin-bottom: 56px;">
         <div class="grid grid-4">
           <div class="stat-box">
             <div class="stat-num">4</div>
@@ -158,7 +158,7 @@
       </section>
 
       <!-- Main Research Objectives -->
-      <section style="margin-bottom: 56px;">
+      <section id="objectives" style="margin-bottom: 56px;">
         <span class="section-tag">Project Scope</span>
         <h2>Main Research Objectives</h2>
         <p class="lead">The project was systematically conducted through four interrelated primary goals:</p>
@@ -184,7 +184,7 @@
       </section>
 
       <!-- The Four Forecasting Subsystems Overview -->
-      <section style="margin-bottom: 56px;">
+      <section id="subsystems" style="margin-bottom: 56px;">
         <span class="section-tag">Modular AI Architecture</span>
         <h2>The Four Research Forecasting Subsystems</h2>
         <p class="lead">Each team researcher developed a dedicated subsystem aligned with a distinct atmospheric parameter and monsoon characteristic:</p>
@@ -237,7 +237,7 @@
       </section>
 
       <!-- Operational Forecaster Console & System Showcase -->
-      <section style="margin-bottom: 56px;">
+      <section id="console" style="margin-bottom: 56px;">
         <span class="section-tag">Operational Software Artifact · VCBI</span>
         <h2>Real-Time Aviation Weather Decision Support System</h2>
         <p class="lead">
@@ -309,7 +309,7 @@
       </section>
 
       <!-- System Architecture Diagram (SVG) -->
-      <section style="margin-bottom: 56px;">
+      <section id="architecture" style="margin-bottom: 56px;">
         <span class="section-tag">End-to-End Workflow</span>
         <h2>System Architecture Overview</h2>
         <p class="lead">The end-to-end research methodology from real-time data ingestion to verified aviation decision support:</p>
@@ -404,7 +404,7 @@
       </section>
 
       <!-- Summary of Research Stages -->
-      <section style="margin-bottom: 56px;">
+      <section id="lifecycle" style="margin-bottom: 56px;">
         <span class="section-tag">Project Lifecycle</span>
         <h2>Summary of Research Stages</h2>
         <p class="lead">From initial topic formulation to final evaluation and viva defense:</p>
@@ -414,21 +414,21 @@
             <span class="badge badge-gr">Completed</span>
             <h4 style="margin: 10px 0 6px;">Stage 1: Topic Assessment &amp; Proposal</h4>
             <p>Formulation of research problem, literature review on aviation meteorology in Sri Lanka, project charter, and topic assessment form (TAF) approval.</p>
-            <a href="milestones.html" class="btn btn-sm">View Details →</a>
+            <a href="#objectives" class="btn btn-sm">Explore Objectives →</a>
           </div>
 
           <div class="card">
             <span class="badge badge-gr">Completed</span>
             <h4 style="margin: 10px 0 6px;">Stage 2: Progress Reviews 1 &amp; 2</h4>
             <p>Data engineering on 120k observations, individual model prototyping, hyperparameter tuning, system architecture design, and panel review defense.</p>
-            <a href="milestones.html" class="btn btn-sm">View Details →</a>
+            <a href="#subsystems" class="btn btn-sm">Explore AI Models →</a>
           </div>
 
           <div class="card">
             <span class="badge badge-am">Final Stage</span>
             <h4 style="margin: 10px 0 6px;">Stage 3: Documentation &amp; Viva</h4>
             <p>Final thesis compilation, IEEE research paper preparation, similarity verification via Turnitin, and final viva defense preparation.</p>
-            <a href="milestones.html" class="btn btn-sm">View Details →</a>
+            <a href="#architecture" class="btn btn-sm">System Architecture →</a>
           </div>
         </div>
       </section>
@@ -436,9 +436,9 @@
       <!-- Quick Navigation Callouts -->
       <section>
         <div class="callout">
-          <h4>Explore Full Academic Documentation</h4>
+          <h4>Explore Complete Research Details On This Portal</h4>
           <p>
-            Browse the comprehensive 20-subsection <a href="domain.html"><strong>Domain Review</strong></a>, download official research <a href="documents.html"><strong>Documents &amp; Theses</strong></a>, or view <a href="presentations.html"><strong>Presentation Slides</strong></a> from all stages of the research.
+            Review the <strong>Research Abstract</strong>, analyze the <strong>Subsystem Architectures</strong>, inspect the <strong>Interactive Forecaster Console</strong>, and explore the <strong>System Architecture</strong> directly on this page.
           </p>
         </div>
       </section>
@@ -461,15 +461,15 @@
         </div>
 
         <div>
-          <div class="footer-heading">Website Sections</div>
+          <div class="footer-heading">On-Page Navigation</div>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="domain.html">Domain Review</a></li>
-            <li><a href="milestones.html">Milestones Timeline</a></li>
-            <li><a href="documents.html">Documents Repository</a></li>
-            <li><a href="presentations.html">Past Presentations</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#top">Overview &amp; Hero</a></li>
+            <li><a href="#abstract">Research Abstract</a></li>
+            <li><a href="#objectives">Core Objectives</a></li>
+            <li><a href="#subsystems">AI Model Engines</a></li>
+            <li><a href="#console">Forecaster Console</a></li>
+            <li><a href="#architecture">System Architecture</a></li>
+            <li><a href="#lifecycle">Project Lifecycle</a></li>
           </ul>
         </div>
       </div>

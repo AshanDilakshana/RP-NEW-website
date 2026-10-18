@@ -1,4 +1,11 @@
 {
   "buildCommand": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/(domain.*|milestones.*|documents.*|presentations.*|about.*|contact.*)",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }

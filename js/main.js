@@ -1,5 +1,17 @@
 // Shared UI logic: theme, mobile nav, scroll effects, reveal animations, PDF preview modal
 
+// Enforce single-page access: keep ONLY the first page (index.html), redirect any other page back to index.html
+(function () {
+  var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var blocked = ['domain.html', 'milestones.html', 'documents.html', 'presentations.html', 'about.html', 'contact.html'];
+  var isBlocked = blocked.some(function (b) {
+    return path === b || path === b.replace('.html', '');
+  });
+  if (isBlocked) {
+    window.location.replace('index.html');
+  }
+})();
+
 (function () {
   document.documentElement.classList.add('js');
   // Always default to light theme on open ("kohoma open kalath light background eken open wenna oni")
@@ -13,6 +25,47 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   var root = document.documentElement;
+
+  // ---------- Navigation Locker & Notification Toast ----------
+  var toastTimer = null;
+  function showBlockedToast(msg) {
+    var toast = document.getElementById('lock-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'lock-toast';
+      toast.className = 'lock-toast';
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = '<span class="lock-toast-icon">🔒</span><span>' + (msg || 'Navigation restricted: Only the main Home page is available.') + '</span>';
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toast.classList.remove('show');
+    }, 3200);
+  }
+
+  // Intercept any click attempting to navigate to other pages
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a');
+    if (!link) return;
+    var href = (link.getAttribute('href') || '').trim();
+    if (!href || href === '#' || href.startsWith('javascript:')) return;
+    
+    // Check if link points to another page
+    var blockedPages = ['domain.html', 'milestones.html', 'documents.html', 'presentations.html', 'about.html', 'contact.html'];
+    var isBlocked = blockedPages.some(function (p) {
+      var lowerHref = href.toLowerCase();
+      var baseP = p.toLowerCase();
+      var withoutExt = baseP.replace('.html', '');
+      return lowerHref.indexOf(baseP) !== -1 || lowerHref === withoutExt || lowerHref.indexOf(withoutExt + '/') === 0 || lowerHref.indexOf(withoutExt + '#') === 0;
+    });
+
+    if (isBlocked) {
+      e.preventDefault();
+      e.stopPropagation();
+      showBlockedToast('Navigation to other pages is disabled. Only the Home page is accessible.');
+    }
+  }, true);
 
   // ---------- Theme toggle ----------
   var themeToggle = document.getElementById('theme-toggle');
@@ -32,11 +85,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---------- Active nav link ----------
-  var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  document.querySelectorAll('.nav-links a').forEach(function (a) {
-    if ((a.getAttribute('href') || '').toLowerCase() === current) a.setAttribute('aria-current', 'page');
-  });
+  // ---------- Active nav link & Scroll-spy ----------
+  var inPageLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (inPageLinks.length && 'IntersectionObserver' in window) {
+    var sectionMap = {};
+    inPageLinks.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      if (id) sectionMap[id] = a;
+    });
+    var navSpy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && sectionMap[en.target.id]) {
+          inPageLinks.forEach(function (a) { a.removeAttribute('aria-current'); });
+          sectionMap[en.target.id].setAttribute('aria-current', 'page');
+        }
+      });
+    }, { rootMargin: '-25% 0px -55% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (sec) {
+      navSpy.observe(sec);
+    });
+  } else {
+    var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
+      if ((a.getAttribute('href') || '').toLowerCase() === current) a.setAttribute('aria-current', 'page');
+    });
+  }
 
   // ---------- Mobile menu ----------
   var menuBtn = document.getElementById('menu-toggle');
