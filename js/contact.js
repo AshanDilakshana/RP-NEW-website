@@ -49,13 +49,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (isValid) {
-        // Display transparent demonstration response as required by academic guidelines
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const subject = subjectInput.value.trim();
+        const message = messageInput.value.trim();
+
+        const primaryRecipient = 'it22113986@my.sliit.lk';
+        const ccRecipients = 'it22269720@my.sliit.lk,it22619976@my.sliit.lk,it22069504@my.sliit.lk';
+
+        const emailSubject = encodeURIComponent(`[R26-IT-132 Inquiry] ${subject}`);
+        const emailBody = encodeURIComponent(
+          `Full Name: ${name}\n` +
+          `Sender Email: ${email}\n` +
+          `Subject: ${subject}\n\n` +
+          `Message:\n${message}\n\n` +
+          `---\nSent via SLIIT Research Project R26-IT-132 Academic Portal`
+        );
+
+        const mailtoUrl = `mailto:${primaryRecipient}?cc=${encodeURIComponent(ccRecipients)}&subject=${emailSubject}&body=${emailBody}`;
+
+        // Immediately trigger the user's default email client / mailbox
+        window.location.href = mailtoUrl;
+
+        // Display transparent status notice with manual link fallback
         if (alertBox) {
           alertBox.style.display = 'block';
           alertBox.className = 'callout callout-am';
           alertBox.innerHTML = `
-            <h4>Academic Demonstration Notice</h4>
-            <p>Thank you, <strong>${escapeHtml(nameInput.value.trim())}</strong>. Your inputs have been validated successfully. Since this is an academic research information site without an external mail server, you can also send this inquiry directly via email to the research team: <a href="mailto:it22113986@my.sliit.lk?subject=${encodeURIComponent(subjectInput.value.trim())}&body=${encodeURIComponent(messageInput.value.trim())}"><strong>Send via Mail Client →</strong></a></p>
+            <h4>Opening Email Client...</h4>
+            <p>Thank you, <strong>${escapeHtml(name)}</strong>! Your default email client (Outlook, Apple Mail, Gmail, etc.) is opening with your message details pre-filled.</p>
+            <p style="margin-top: 8px; font-size: 13.5px;">If your mailbox did not open automatically, please <a href="${mailtoUrl}"><strong>click here to open your mail client →</strong></a></p>
           `;
           contactForm.reset();
         }
